@@ -16,8 +16,18 @@ async function songs() {
     }
     console.log(song);
 
-    const tree = document.getElementsByTagName("a");
-    tree.href = song;
+    const songMain = document.querySelector(".song-main");
+    const songCard = document.createElement("a");
+    console.log(songCard);
+    const display = (songCard.href = song);
+    songMain.innerHTML = display;
+
+    const audio = new Audio(song) 
+    audio.play();
+    audio.pause();
+        
+
+    
   }
 }
 
